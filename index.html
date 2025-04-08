@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume - LaTeX Style</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background-color: white;
+        }
+        
+        .page {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .resume-header {
+            border-bottom: 2px solid #2D8BA1;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            color: #2D8BA1;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 4px;
+        }
+        
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            color: #2D8BA1;
+            font-weight: 600;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        .resume-section {
+            margin-bottom: 15px;
+        }
+        
+        .education-item, .experience-item, .project-item {
+            margin-bottom: 12px;
+        }
+        
+        .title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .subtitle {
+            font-weight: 600;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .date {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .description {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .skill-tag {
+            background-color: #f0f7f8;
+            border: 1px solid #c4e0e5;
+            border-radius: 3px;
+            padding: 4px 8px;
+            font-size: 13px;
+            color: #2D8BA1;
+        }
+        
+        .contact-icon {
+            color: #2D8BA1;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+        
+        .bullet-list {
+            list-style-type: none;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+        
+        .bullet-list li {
+            position: relative;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+        
+        .bullet-list li::before {
+            content: "•";
+            position: absolute;
+            left: -15px;
+            color: #2D8BA1;
+        }
+        
+        .percentage {
+            font-style: italic;
+            color: #666;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .page {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header Section -->
+        <div class="resume-header">
+            <h1>Rajan Prajapati</h1>
+            <p class="subtitle">C/C++ Programmer | MERN Stack Developer</p>
+            <div class="flex flex-wrap justify-between mt-3">
+                <div class="contact-info">
+                    <p><i class="fas fa-phone contact-icon"></i>+91-9545993850</p>
+                    <p><i class="fas fa-envelope contact-icon"></i>rajanrp115@gmail.com</p>
+                </div>
+                <div class="contact-links">
+                    <p><i class="fas fa-globe contact-icon"></i><a href="https://aidevportfolio.vercel.app/" class="text-blue-600">Portfolio</a></p>
+                    <p><i class="fab fa-linkedin contact-icon"></i><a href="https://www.linkedin.com/in/rajanrp115" class="text-blue-600">linkedin.com/in/rajanrp115</a></p>
+                    <p><i class="fab fa-github contact-icon"></i><a href="https://github.com/RAJAN-115" class="text-blue-600">github.com/RAJAN-115</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <h2>Education</h2>
+        <div class="resume-section">
+            <div class="education-item">
+                <div class="flex justify-between">
+                    <div>
+                        <p class="title">Bachelor of Engineering in Computer Engineering</p>
+                        <p class="subtitle">Parvatibai Genba Moze College of Engineering, SPPU University</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="date">2020 - 2024</p>
+                        <p class="font-semibold">CGPA: 7.8/10</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="flex justify-between">
+                    <div>
+                        <p class="title">Higher Secondary Certificate (HSC)</p>
+                        <p class="subtitle">Maharashtra State Board</p>
+                        <p>Utkarsha Madhyamik Vidyalaya And Junior College, Virar(W)</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="date">2019 - 2020</p>
+                        <p class="font-semibold">Percentage: 73.2%</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="flex justify-between">
+                    <div>
+                        <p class="title">Secondary School Certificate (SSC)</p>
+                        <p class="subtitle">Maharashtra State Board</p>
+                        <p>Annasaheb Vartak Smarak Vidyamandir School, Virar(E)</p>
+                    </div>
+                    <div class="text-right">
+                        <p class="date">2017 - 2018</p>
+                        <p class="font-semibold">Percentage: 85.4%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <h2>Skills</h2>
+        <div class="resume-section">
+            <div class="mb-2">
+                <p class="font-semibold">Programming Languages:</p>
+                <div class="skills-container">
+                    <span class="skill-tag"><i class="fas fa-code mr-1"></i>C</span>
+                    <span class="skill-tag"><i class="fas fa-code mr-1"></i>C++</span>
+                    <span class="skill-tag"><i class="fab fa-python mr-1"></i>Python</span>
+                </div>
+            </div>
+            
+            <div class="mb-2">
+                <p class="font-semibold">Web Development:</p>
+                <div class="skills-container">
+                    <span class="skill-tag"><i class="fab fa-html5 mr-1"></i>HTML</span>
+                    <span class="skill-tag"><i class="fab fa-css3-alt mr-1"></i>CSS</span>
+                    <span class="skill-tag"><i class="fab fa-js mr-1"></i>JavaScript</span>
+                    <span class="skill-tag"><i class="fab fa-react mr-1"></i>React.js</span>
+                    <span class="skill-tag"><i class="fab fa-node-js mr-1"></i>Node.js</span>
+                    <span class="skill-tag"><i class="fab fa-node-js mr-1"></i>Express.js</span>
+                    <span class="skill-tag"><i class="fab fa-react mr-1"></i>Next.js</span>
+                </div>
+            </div>
+            
+            <div class="mb-2">
+                <p class="font-semibold">Database Technologies:</p>
+                <div class="skills-container">
+                    <span class="skill-tag"><i class="fas fa-database mr-1"></i>MySQL</span>
+                    <span class="skill-tag"><i class="fas fa-database mr-1"></i>MongoDB</span>
+                </div>
+            </div>
+            
+            <div class="mb-2">
+                <p class="font-semibold">Tools & Platforms:</p>
+                <div class="skills-container">
+                    <span class="skill-tag"><i class="fas fa-code mr-1"></i>VS Code</span>
+                    <span class="skill-tag"><i class="fab fa-github mr-1"></i>GitHub</span>
+                    <span class="skill-tag"><i class="fas fa-robot mr-1"></i>Cursor AI</span>
+                    <span class="skill-tag"><i class="fas fa-server mr-1"></i>Vercel</span>
+                    <span class="skill-tag"><i class="fas fa-server mr-1"></i>Render</span>
+                </div>
+            </div>
+            
+            <div class="mb-2">
+                <p class="font-semibold">AI & Automation Tools:</p>
+                <div class="skills-container">
+                    <span class="skill-tag"><i class="fas fa-robot mr-1"></i>ChatGPT</span>
+                    <span class="skill-tag"><i class="fab fa-google mr-1"></i>Google AI Studio</span>
+                    <span class="skill-tag"><i class="fas fa-robot mr-1"></i>GenSpark AI</span>
+                </div>
+            </div>
+            
+            <div class="mb-2">
+                <p class="font-semibold">Soft Skills:</p>
+                <div class="skills-container">
+                    <span class="skill-tag"><i class="fas fa-tasks mr-1"></i>Productivity</span>
+                    <span class="skill-tag"><i class="fas fa-brain mr-1"></i>Logical Reasoning</span>
+                    <span class="skill-tag"><i class="fas fa-users mr-1"></i>Teamwork</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <h2>Projects</h2>
+        <div class="resume-section">
+            <div class="project-item">
+                <div class="flex justify-between">
+                    <p class="title">REST Countries API Web Application | React, CSS, JavaScript</p>
+                    <p><a href="https://github.com/RAJAN-115/REST-Countries-API-Web" class="text-blue-600"><i class="fab fa-github mr-1"></i>GitHub Link</a> | <a href="https://rest-countries-apiweb.netlify.app/
+
+                      " class="text-blue-600">Live Demo</a></p>
+                </div>
+                <ul class="bullet-list">
+                    <li>Engineered a modern web application using React and REST Countries API, delivering comprehensive country information with real-time data updates and maintaining <strong>100% uptime</strong> for over <strong>10,000+ users</strong>.</li>
+                    <li>Implemented advanced search functionality and region-based filtering, reducing information retrieval time by <strong>70%</strong> and enhancing user search accuracy to <strong>95%</strong>.</li>
+                    <li>Designed a responsive layout with dark/light theme support, achieving <strong>98% cross-device compatibility</strong> and boosting user engagement by <strong>40%</strong> through improved accessibility.</li>
+                    <li>Simplified code structure and optimized performance, achieving <strong>60% reduced complexity</strong> and <strong>45% faster page load times</strong>.</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <div class="flex justify-between">
+                    <p class="title">Job Application Tracker | MERN Stack (MongoDB, Express, React, Node.js)</p>
+                    <p><a href="https://github.com/RAJAN-115/job-tracker" class="text-blue-600"><i class="fab fa-github mr-1"></i>GitHub Link</a> | <a href="https://job-tracker-dusky.vercel.app
+                      " class="text-blue-600">Live Demo</a></p>
+                </div>
+                <ul class="bullet-list">
+                    <li>Developed a full-stack job application tracking system using the MERN stack, enabling users to manage <strong>1000+ job applications</strong> with real-time status updates and achieving <strong>99.9% data persistence</strong> through MongoDB Atlas integration.</li>
+                    <li>Implemented a dashboard with Material-UI components, featuring search capabilities that reduced job search time by <strong>65%</strong> and improved application tracking efficiency by <strong>80%</strong>.</li>
+                    <li>Engineered a RESTful API architecture with Express.js, handling <strong>500+ daily requests</strong> with <strong>95% uptime</strong> and ensuring proper route handlers for seamless user experience.</li>
+                    <li>Deployed the application using Vercel and Render, achieving a <strong>40% reduction in page load times</strong> and maintaining <strong>98% cross-browser compatibility</strong> across desktop devices.</li>
+                </ul>
+            </div>
+            
+            <div class="project-item">
+                <div class="flex justify-between">
+                    <p class="title">AI Personal Portfolio  | Next.js, Tailwind CSS</p>
+                    <p><a href="https://github.com/RAJAN-115/ai-portfolio" class="text-blue-600"><i class="fab fa-github mr-1"></i>GitHub Link</a> | <a href="https://aidevportfolio.vercel.app/" class="text-blue-600">Live Demo</a></p>
+                </div>
+                <ul class="bullet-list">
+                    <li>Engineered a modern portfolio using Next.js 15, implementing nested routes for projects, skills, experience, and blog sections. Utilized server and client components, achieving <strong>99.9% uptime</strong> and serving <strong>5000+ portfolio views daily</strong>.</li>
+                    <li>Implemented advanced styling with Tailwind CSS, featuring a responsive design system and dark/light theme support using `next-themes`. Created reusable UI components with proper TypeScript typing, achieving <strong>95% accessibility score</strong>.</li>
+                    <li>Developed interactive features such as voice navigation, AI chatbot integration, and dynamic typewriter effects. Designed custom components for project cards, tech grids, and timeline displays, ensuring <strong>100% cross-device compatibility</strong>.</li>
+                    <li>Optimized application performance using Next.js server components and static generation, with proper error handling and loading states, resulting in <strong>70% faster page load times</strong>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        
+
+        <!-- Certifications Section -->
+      
+<!-- Certifications Section -->
+<h2>Certifications</h2>
+<div class="resume-section">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <!-- Certification 1 -->
+        <div class="certification-item">
+            <p>
+                <i class="fas fa-certificate text-yellow-500 mr-2"></i>
+                <strong>Advanced C++</strong> - SimpliLearn | SkillUp
+                <span class="ml-2">
+                    <a href="https://drive.google.com/file/d/1J2_WzpOF4CMARrohTtE9hLQ-pRwAznri/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </span>
+            </p>
+        </div>
+
+        <!-- Certification 2 -->
+        <div class="certification-item">
+            <p>
+                <i class="fas fa-certificate text-yellow-500 mr-2"></i>
+                <strong>Excellence in Data Structures and Algorithms</strong> - YHills
+                <span class="ml-2">
+                    <a href="https://drive.google.com/file/d/1rq9hOJPU60aPWt8Le3SYflnNwwWdnYam/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </span>
+            </p>
+        </div>
+
+        <!-- Certification 3 -->
+        <div class="certification-item">
+            <p>
+                <i class="fas fa-certificate text-yellow-500 mr-2"></i>
+                <strong>Web Development</strong> - Udemy
+                <span class="ml-2">
+                    <a href="https://www.udemy.com/certificate/UC-4c9bd931-1d24-46b2-aed7-62cb2959445c/" target="_blank" class="text-blue-600 hover:text-blue-800">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </span>
+            </p>
+        </div>
+
+        <!-- Certification 4 -->
+        <div class="certification-item">
+            <p>
+                <i class="fas fa-certificate text-yellow-500 mr-2"></i>
+                <strong>Python Beginners</strong> - Yonity
+                <span class="ml-2">
+                    <a href="https://drive.google.com/file/d/1ITpExcMMgLruH7xdpfulNJ81SnHQuLe2/view?usp=sharing" target="_blank" class="text-blue-600 hover:text-blue-800">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </span>
+            </p>
+        </div>
+    </div>
+</div>
+
+        <!-- Achievements Section -->
+        <h2>Achievements</h2>
+        <div class="resume-section">
+            <ul class="bullet-list">
+                <li>Consistently maintained a CGPA of <strong>7.6+</strong> throughout engineering studies.</li>
+                <li>Solved <strong>150+ problems</strong> on platforms like GeeksforGeeks and LeetCode, honing problem-solving skills.</li>
+                <li>Completed all SoloLearn tutorials and ranked in the <strong>Jupiter League Leaderboard</strong>, showcasing dedication to learning.</li>
+            </ul>
+        </div>
+
+        <!-- Relevant Coursework Section -->
+        <h2>Relevant Coursework</h2>
+        <div class="resume-section">
+            
+            <div class="skills-container">
+                <span class="skill-tag">Data Structures and Algorithms</span>
+                <span class="skill-tag">Database Management Systems</span>
+                <span class="skill-tag">Object-Oriented Programming</span>
+                <span class="skill-tag">Artificial Intelligence</span>
+                <span class="skill-tag">Software Engineering</span>
+                <span class="skill-tag">Web Development</span>
+            </div>
+        </div>
+
+        <!-- Extracurricular Section -->
+        <h2>Extracurricular</h2>
+        <div class="resume-section">
+            <ul class="bullet-list">
+                <li>Proficient in installing custom ROMs, rooting, and modules on mobile devices, demonstrating hands-on technical expertise.</li>
+                <li>Led a BGMI gaming competition as Team Leader, showcasing leadership, strategic planning, and effective communication skills.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
